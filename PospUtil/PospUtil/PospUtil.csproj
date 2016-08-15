@@ -54,7 +54,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="util\EncryptUtil.cs" />
+    <Compile Include="util\AbsMac.cs" />
+    <Compile Include="util\ANSIX919.cs" />
+    <Compile Include="util\ANSIX99.cs" />
+    <Compile Include="util\DesEncryptUtil.cs" />
+    <Compile Include="util\PospMac.cs" />
     <Compile Include="util\StringUtil.cs" />
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
