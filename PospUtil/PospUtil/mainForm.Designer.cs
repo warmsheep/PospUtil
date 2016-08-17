@@ -284,7 +284,7 @@
             this.groupBox1.Location = new System.Drawing.Point(499, 347);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(454, 232);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "常用算法";
             // 
@@ -295,7 +295,7 @@
             this.rbtnEncSha1.Location = new System.Drawing.Point(183, 20);
             this.rbtnEncSha1.Name = "rbtnEncSha1";
             this.rbtnEncSha1.Size = new System.Drawing.Size(47, 16);
-            this.rbtnEncSha1.TabIndex = 5;
+            this.rbtnEncSha1.TabIndex = 1;
             this.rbtnEncSha1.Text = "SHA1";
             this.rbtnEncSha1.UseVisualStyleBackColor = true;
             // 
@@ -307,7 +307,7 @@
             this.rbtnEncMd5.Location = new System.Drawing.Point(99, 20);
             this.rbtnEncMd5.Name = "rbtnEncMd5";
             this.rbtnEncMd5.Size = new System.Drawing.Size(41, 16);
-            this.rbtnEncMd5.TabIndex = 5;
+            this.rbtnEncMd5.TabIndex = 0;
             this.rbtnEncMd5.TabStop = true;
             this.rbtnEncMd5.Text = "MD5";
             this.rbtnEncMd5.UseVisualStyleBackColor = true;
@@ -320,7 +320,7 @@
             this.tboxEncResult.Name = "tboxEncResult";
             this.tboxEncResult.ReadOnly = true;
             this.tboxEncResult.Size = new System.Drawing.Size(299, 58);
-            this.tboxEncResult.TabIndex = 1;
+            this.tboxEncResult.TabIndex = 3;
             this.tboxEncResult.TextChanged += new System.EventHandler(this.tboxMacReqData_TextChanged);
             // 
             // tboxEncReqData
@@ -330,7 +330,7 @@
             this.tboxEncReqData.Multiline = true;
             this.tboxEncReqData.Name = "tboxEncReqData";
             this.tboxEncReqData.Size = new System.Drawing.Size(299, 58);
-            this.tboxEncReqData.TabIndex = 1;
+            this.tboxEncReqData.TabIndex = 2;
             this.tboxEncReqData.TextChanged += new System.EventHandler(this.tboxMacReqData_TextChanged);
             // 
             // label17
@@ -340,7 +340,7 @@
             this.label17.Location = new System.Drawing.Point(25, 132);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(29, 12);
-            this.label17.TabIndex = 1;
+            this.label17.TabIndex = 7;
             this.label17.Text = "结果";
             // 
             // label14
@@ -350,7 +350,7 @@
             this.label14.Location = new System.Drawing.Point(25, 59);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(29, 12);
-            this.label14.TabIndex = 1;
+            this.label14.TabIndex = 6;
             this.label14.Text = "数据";
             // 
             // btnEncEncrypt
@@ -371,7 +371,7 @@
             this.label13.Location = new System.Drawing.Point(23, 24);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(29, 12);
-            this.label13.TabIndex = 0;
+            this.label13.TabIndex = 5;
             this.label13.Text = "算法";
             // 
             // gpBoxPinEncrypt
@@ -396,7 +396,7 @@
             this.gpBoxPinEncrypt.Location = new System.Drawing.Point(22, 347);
             this.gpBoxPinEncrypt.Name = "gpBoxPinEncrypt";
             this.gpBoxPinEncrypt.Size = new System.Drawing.Size(453, 232);
-            this.gpBoxPinEncrypt.TabIndex = 2;
+            this.gpBoxPinEncrypt.TabIndex = 3;
             this.gpBoxPinEncrypt.TabStop = false;
             this.gpBoxPinEncrypt.Text = "PIN加密";
             // 
@@ -407,7 +407,7 @@
             this.label16.Location = new System.Drawing.Point(23, 168);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(29, 12);
-            this.label16.TabIndex = 2;
+            this.label16.TabIndex = 11;
             this.label16.Text = "结果";
             this.label16.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -418,7 +418,7 @@
             this.label15.Location = new System.Drawing.Point(23, 132);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(29, 12);
-            this.label15.TabIndex = 2;
+            this.label15.TabIndex = 10;
             this.label15.Text = "密码";
             this.label15.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -429,7 +429,7 @@
             this.label12.Location = new System.Drawing.Point(23, 96);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(29, 12);
-            this.label12.TabIndex = 2;
+            this.label12.TabIndex = 9;
             this.label12.Text = "卡号";
             this.label12.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -439,7 +439,7 @@
             this.btnPinDecrypt.Location = new System.Drawing.Point(323, 198);
             this.btnPinDecrypt.Name = "btnPinDecrypt";
             this.btnPinDecrypt.Size = new System.Drawing.Size(75, 23);
-            this.btnPinDecrypt.TabIndex = 4;
+            this.btnPinDecrypt.TabIndex = 6;
             this.btnPinDecrypt.Text = "解密";
             this.btnPinDecrypt.UseVisualStyleBackColor = true;
             this.btnPinDecrypt.Click += new System.EventHandler(this.btnPinDecrypt_Click);
@@ -450,7 +450,7 @@
             this.btnPinEncrypt.Location = new System.Drawing.Point(227, 198);
             this.btnPinEncrypt.Name = "btnPinEncrypt";
             this.btnPinEncrypt.Size = new System.Drawing.Size(75, 23);
-            this.btnPinEncrypt.TabIndex = 4;
+            this.btnPinEncrypt.TabIndex = 5;
             this.btnPinEncrypt.Text = "加密";
             this.btnPinEncrypt.UseVisualStyleBackColor = true;
             this.btnPinEncrypt.Click += new System.EventHandler(this.btnPinEncrypt_Click);
@@ -462,7 +462,7 @@
             this.label11.Location = new System.Drawing.Point(23, 24);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 12);
-            this.label11.TabIndex = 2;
+            this.label11.TabIndex = 7;
             this.label11.Text = "主密钥";
             this.label11.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -473,7 +473,7 @@
             this.label10.Location = new System.Drawing.Point(23, 60);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(47, 12);
-            this.label10.TabIndex = 2;
+            this.label10.TabIndex = 8;
             this.label10.Text = "PIN密钥";
             this.label10.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -484,7 +484,7 @@
             this.lbPinPasswordLength.Location = new System.Drawing.Point(404, 132);
             this.lbPinPasswordLength.Name = "lbPinPasswordLength";
             this.lbPinPasswordLength.Size = new System.Drawing.Size(11, 12);
-            this.lbPinPasswordLength.TabIndex = 6;
+            this.lbPinPasswordLength.TabIndex = 15;
             this.lbPinPasswordLength.Text = "0";
             // 
             // lbPinCardNoLength
@@ -494,7 +494,7 @@
             this.lbPinCardNoLength.Location = new System.Drawing.Point(404, 96);
             this.lbPinCardNoLength.Name = "lbPinCardNoLength";
             this.lbPinCardNoLength.Size = new System.Drawing.Size(11, 12);
-            this.lbPinCardNoLength.TabIndex = 6;
+            this.lbPinCardNoLength.TabIndex = 14;
             this.lbPinCardNoLength.Text = "0";
             // 
             // lbPinMasterKeyLength
@@ -504,7 +504,7 @@
             this.lbPinMasterKeyLength.Location = new System.Drawing.Point(404, 24);
             this.lbPinMasterKeyLength.Name = "lbPinMasterKeyLength";
             this.lbPinMasterKeyLength.Size = new System.Drawing.Size(11, 12);
-            this.lbPinMasterKeyLength.TabIndex = 6;
+            this.lbPinMasterKeyLength.TabIndex = 12;
             this.lbPinMasterKeyLength.Text = "0";
             // 
             // lbPinKeyLength
@@ -514,7 +514,7 @@
             this.lbPinKeyLength.Location = new System.Drawing.Point(404, 60);
             this.lbPinKeyLength.Name = "lbPinKeyLength";
             this.lbPinKeyLength.Size = new System.Drawing.Size(11, 12);
-            this.lbPinKeyLength.TabIndex = 6;
+            this.lbPinKeyLength.TabIndex = 13;
             this.lbPinKeyLength.Text = "0";
             // 
             // tboxPinResult
@@ -525,7 +525,7 @@
             this.tboxPinResult.Name = "tboxPinResult";
             this.tboxPinResult.ReadOnly = true;
             this.tboxPinResult.Size = new System.Drawing.Size(299, 21);
-            this.tboxPinResult.TabIndex = 3;
+            this.tboxPinResult.TabIndex = 4;
             this.tboxPinResult.TextChanged += new System.EventHandler(this.tboxDesKey_TextChanged);
             // 
             // tboxPinPassword
@@ -545,7 +545,7 @@
             this.tboxPinCardNo.MaxLength = 48;
             this.tboxPinCardNo.Name = "tboxPinCardNo";
             this.tboxPinCardNo.Size = new System.Drawing.Size(299, 21);
-            this.tboxPinCardNo.TabIndex = 3;
+            this.tboxPinCardNo.TabIndex = 2;
             this.tboxPinCardNo.TextChanged += new System.EventHandler(this.tboxPinCardNo_TextChanged);
             // 
             // tboxPinMasterKey
@@ -555,7 +555,7 @@
             this.tboxPinMasterKey.MaxLength = 48;
             this.tboxPinMasterKey.Name = "tboxPinMasterKey";
             this.tboxPinMasterKey.Size = new System.Drawing.Size(299, 21);
-            this.tboxPinMasterKey.TabIndex = 3;
+            this.tboxPinMasterKey.TabIndex = 0;
             this.tboxPinMasterKey.TextChanged += new System.EventHandler(this.tboxPinMasterKey_TextChanged);
             // 
             // tboxPinKey
@@ -565,7 +565,7 @@
             this.tboxPinKey.MaxLength = 48;
             this.tboxPinKey.Name = "tboxPinKey";
             this.tboxPinKey.Size = new System.Drawing.Size(299, 21);
-            this.tboxPinKey.TabIndex = 3;
+            this.tboxPinKey.TabIndex = 1;
             this.tboxPinKey.TextChanged += new System.EventHandler(this.tboxPinKey_TextChanged);
             // 
             // gpBoxXor
@@ -591,7 +591,7 @@
             this.lbXorReqDataLength.Location = new System.Drawing.Point(404, 21);
             this.lbXorReqDataLength.Name = "lbXorReqDataLength";
             this.lbXorReqDataLength.Size = new System.Drawing.Size(11, 12);
-            this.lbXorReqDataLength.TabIndex = 7;
+            this.lbXorReqDataLength.TabIndex = 5;
             this.lbXorReqDataLength.Text = "0";
             this.lbXorReqDataLength.Click += new System.EventHandler(this.lbReqDataLength_Click);
             // 
@@ -602,7 +602,7 @@
             this.tboxXorReqData.Multiline = true;
             this.tboxXorReqData.Name = "tboxXorReqData";
             this.tboxXorReqData.Size = new System.Drawing.Size(299, 92);
-            this.tboxXorReqData.TabIndex = 1;
+            this.tboxXorReqData.TabIndex = 0;
             this.tboxXorReqData.TextChanged += new System.EventHandler(this.tboxXorReqData_TextChanged);
             // 
             // label4
@@ -612,7 +612,7 @@
             this.label4.Location = new System.Drawing.Point(23, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 12);
-            this.label4.TabIndex = 2;
+            this.label4.TabIndex = 3;
             this.label4.Text = "数据";
             this.label4.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -622,7 +622,7 @@
             this.btnXor.Location = new System.Drawing.Point(323, 120);
             this.btnXor.Name = "btnXor";
             this.btnXor.Size = new System.Drawing.Size(75, 23);
-            this.btnXor.TabIndex = 4;
+            this.btnXor.TabIndex = 2;
             this.btnXor.Text = "异或";
             this.btnXor.UseVisualStyleBackColor = true;
             this.btnXor.Click += new System.EventHandler(this.btnXor_Click);
@@ -634,7 +634,7 @@
             this.label5.Location = new System.Drawing.Point(25, 123);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 12);
-            this.label5.TabIndex = 2;
+            this.label5.TabIndex = 4;
             this.label5.Text = "结果";
             this.label5.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -645,7 +645,7 @@
             this.tboxXorResult.Name = "tboxXorResult";
             this.tboxXorResult.ReadOnly = true;
             this.tboxXorResult.Size = new System.Drawing.Size(203, 21);
-            this.tboxXorResult.TabIndex = 3;
+            this.tboxXorResult.TabIndex = 1;
             // 
             // gpBoxMac
             // 
@@ -667,7 +667,7 @@
             this.gpBoxMac.Location = new System.Drawing.Point(499, 14);
             this.gpBoxMac.Name = "gpBoxMac";
             this.gpBoxMac.Size = new System.Drawing.Size(454, 324);
-            this.gpBoxMac.TabIndex = 0;
+            this.gpBoxMac.TabIndex = 2;
             this.gpBoxMac.TabStop = false;
             this.gpBoxMac.Text = "MAC计算";
             // 
@@ -678,7 +678,7 @@
             this.tboxMacReqData.Multiline = true;
             this.tboxMacReqData.Name = "tboxMacReqData";
             this.tboxMacReqData.Size = new System.Drawing.Size(299, 141);
-            this.tboxMacReqData.TabIndex = 1;
+            this.tboxMacReqData.TabIndex = 2;
             this.tboxMacReqData.TextChanged += new System.EventHandler(this.tboxMacReqData_TextChanged);
             // 
             // lbMacReqDataLength
@@ -688,7 +688,7 @@
             this.lbMacReqDataLength.Location = new System.Drawing.Point(404, 94);
             this.lbMacReqDataLength.Name = "lbMacReqDataLength";
             this.lbMacReqDataLength.Size = new System.Drawing.Size(11, 12);
-            this.lbMacReqDataLength.TabIndex = 7;
+            this.lbMacReqDataLength.TabIndex = 13;
             this.lbMacReqDataLength.Text = "0";
             this.lbMacReqDataLength.Click += new System.EventHandler(this.lbReqDataLength_Click);
             // 
@@ -699,7 +699,7 @@
             this.lbMacMacKeyLength.Location = new System.Drawing.Point(404, 59);
             this.lbMacMacKeyLength.Name = "lbMacMacKeyLength";
             this.lbMacMacKeyLength.Size = new System.Drawing.Size(11, 12);
-            this.lbMacMacKeyLength.TabIndex = 7;
+            this.lbMacMacKeyLength.TabIndex = 12;
             this.lbMacMacKeyLength.Text = "0";
             this.lbMacMacKeyLength.Click += new System.EventHandler(this.lbReqDataLength_Click);
             // 
@@ -710,7 +710,7 @@
             this.lbMacMasterKeyLength.Location = new System.Drawing.Point(404, 26);
             this.lbMacMasterKeyLength.Name = "lbMacMasterKeyLength";
             this.lbMacMasterKeyLength.Size = new System.Drawing.Size(11, 12);
-            this.lbMacMasterKeyLength.TabIndex = 6;
+            this.lbMacMasterKeyLength.TabIndex = 11;
             this.lbMacMasterKeyLength.Text = "0";
             // 
             // btnTerminalMac
@@ -719,7 +719,7 @@
             this.btnTerminalMac.Location = new System.Drawing.Point(304, 288);
             this.btnTerminalMac.Name = "btnTerminalMac";
             this.btnTerminalMac.Size = new System.Drawing.Size(94, 23);
-            this.btnTerminalMac.TabIndex = 4;
+            this.btnTerminalMac.TabIndex = 6;
             this.btnTerminalMac.Text = "终端MAC计算";
             this.btnTerminalMac.UseVisualStyleBackColor = true;
             this.btnTerminalMac.Click += new System.EventHandler(this.btnTerminalMac_Click);
@@ -731,7 +731,7 @@
             this.btnX99Mac.Location = new System.Drawing.Point(201, 288);
             this.btnX99Mac.Name = "btnX99Mac";
             this.btnX99Mac.Size = new System.Drawing.Size(94, 23);
-            this.btnX99Mac.TabIndex = 4;
+            this.btnX99Mac.TabIndex = 5;
             this.btnX99Mac.Text = "X919-MAC计算";
             this.btnX99Mac.UseVisualStyleBackColor = true;
             this.btnX99Mac.Click += new System.EventHandler(this.btnMacEncryptX919_Click);
@@ -763,7 +763,7 @@
             this.tboxMacMacKey.MaxLength = 48;
             this.tboxMacMacKey.Name = "tboxMacMacKey";
             this.tboxMacMacKey.Size = new System.Drawing.Size(299, 21);
-            this.tboxMacMacKey.TabIndex = 3;
+            this.tboxMacMacKey.TabIndex = 1;
             this.tboxMacMacKey.TextChanged += new System.EventHandler(this.tboxMacMacKey_TextChanged);
             // 
             // label9
@@ -773,7 +773,7 @@
             this.label9.Location = new System.Drawing.Point(25, 254);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(29, 12);
-            this.label9.TabIndex = 2;
+            this.label9.TabIndex = 10;
             this.label9.Text = "结果";
             this.label9.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -784,7 +784,7 @@
             this.tboxMacMasterKey.MaxLength = 48;
             this.tboxMacMasterKey.Name = "tboxMacMasterKey";
             this.tboxMacMasterKey.Size = new System.Drawing.Size(299, 21);
-            this.tboxMacMasterKey.TabIndex = 3;
+            this.tboxMacMasterKey.TabIndex = 0;
             this.tboxMacMasterKey.TextChanged += new System.EventHandler(this.tboxMacMasterKey_TextChanged);
             // 
             // label6
@@ -794,7 +794,7 @@
             this.label6.Location = new System.Drawing.Point(25, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 12);
-            this.label6.TabIndex = 2;
+            this.label6.TabIndex = 9;
             this.label6.Text = "数据";
             this.label6.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -805,7 +805,7 @@
             this.label7.Location = new System.Drawing.Point(25, 59);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 12);
-            this.label7.TabIndex = 1;
+            this.label7.TabIndex = 8;
             this.label7.Text = "MAC密钥";
             // 
             // label8
@@ -815,7 +815,7 @@
             this.label8.Location = new System.Drawing.Point(23, 26);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 12);
-            this.label8.TabIndex = 0;
+            this.label8.TabIndex = 7;
             this.label8.Text = "主密钥";
             this.label8.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -846,7 +846,7 @@
             this.lbDesReqDataLength.Location = new System.Drawing.Point(404, 59);
             this.lbDesReqDataLength.Name = "lbDesReqDataLength";
             this.lbDesReqDataLength.Size = new System.Drawing.Size(11, 12);
-            this.lbDesReqDataLength.TabIndex = 7;
+            this.lbDesReqDataLength.TabIndex = 9;
             this.lbDesReqDataLength.Text = "0";
             this.lbDesReqDataLength.Click += new System.EventHandler(this.lbReqDataLength_Click);
             // 
@@ -857,7 +857,7 @@
             this.lbDesKeyLength.Location = new System.Drawing.Point(404, 26);
             this.lbDesKeyLength.Name = "lbDesKeyLength";
             this.lbDesKeyLength.Size = new System.Drawing.Size(11, 12);
-            this.lbDesKeyLength.TabIndex = 6;
+            this.lbDesKeyLength.TabIndex = 8;
             this.lbDesKeyLength.Text = "0";
             // 
             // btnDesDecrypt
@@ -866,7 +866,7 @@
             this.btnDesDecrypt.Location = new System.Drawing.Point(323, 130);
             this.btnDesDecrypt.Name = "btnDesDecrypt";
             this.btnDesDecrypt.Size = new System.Drawing.Size(75, 23);
-            this.btnDesDecrypt.TabIndex = 5;
+            this.btnDesDecrypt.TabIndex = 4;
             this.btnDesDecrypt.Text = "解密";
             this.btnDesDecrypt.UseVisualStyleBackColor = true;
             this.btnDesDecrypt.Click += new System.EventHandler(this.btnDesDecrypt_Click);
@@ -877,7 +877,7 @@
             this.btnDesEncrypt.Location = new System.Drawing.Point(227, 130);
             this.btnDesEncrypt.Name = "btnDesEncrypt";
             this.btnDesEncrypt.Size = new System.Drawing.Size(75, 23);
-            this.btnDesEncrypt.TabIndex = 4;
+            this.btnDesEncrypt.TabIndex = 3;
             this.btnDesEncrypt.Text = "加密";
             this.btnDesEncrypt.UseVisualStyleBackColor = true;
             this.btnDesEncrypt.Click += new System.EventHandler(this.btnDesEncrypt_Click);
@@ -889,7 +889,7 @@
             this.tboxDesResult.Name = "tboxDesResult";
             this.tboxDesResult.ReadOnly = true;
             this.tboxDesResult.Size = new System.Drawing.Size(299, 21);
-            this.tboxDesResult.TabIndex = 3;
+            this.tboxDesResult.TabIndex = 2;
             // 
             // tboxDesReqData
             // 
@@ -897,7 +897,7 @@
             this.tboxDesReqData.Location = new System.Drawing.Point(99, 56);
             this.tboxDesReqData.Name = "tboxDesReqData";
             this.tboxDesReqData.Size = new System.Drawing.Size(299, 21);
-            this.tboxDesReqData.TabIndex = 3;
+            this.tboxDesReqData.TabIndex = 1;
             this.tboxDesReqData.TextChanged += new System.EventHandler(this.tboxDesReqData_TextChanged);
             // 
             // tboxDesKey
@@ -907,7 +907,7 @@
             this.tboxDesKey.MaxLength = 48;
             this.tboxDesKey.Name = "tboxDesKey";
             this.tboxDesKey.Size = new System.Drawing.Size(299, 21);
-            this.tboxDesKey.TabIndex = 3;
+            this.tboxDesKey.TabIndex = 0;
             this.tboxDesKey.TextChanged += new System.EventHandler(this.tboxDesKey_TextChanged);
             // 
             // label3
@@ -917,7 +917,7 @@
             this.label3.Location = new System.Drawing.Point(25, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 12);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 7;
             this.label3.Text = "结果";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -928,7 +928,7 @@
             this.label2.Location = new System.Drawing.Point(25, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 12);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 6;
             this.label2.Text = "数据";
             // 
             // label1
@@ -938,7 +938,7 @@
             this.label1.Location = new System.Drawing.Point(25, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 12);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 5;
             this.label1.Text = "密钥";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -2574,7 +2574,7 @@
             this.label18.Location = new System.Drawing.Point(28, 29);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(53, 12);
-            this.label18.TabIndex = 1;
+            this.label18.TabIndex = 0;
             this.label18.Text = "位图数据";
             // 
             // tboxBitmap
@@ -2582,14 +2582,14 @@
             this.tboxBitmap.Location = new System.Drawing.Point(100, 26);
             this.tboxBitmap.Name = "tboxBitmap";
             this.tboxBitmap.Size = new System.Drawing.Size(632, 21);
-            this.tboxBitmap.TabIndex = 2;
+            this.tboxBitmap.TabIndex = 1;
             // 
             // btnBitmapConvert
             // 
             this.btnBitmapConvert.Location = new System.Drawing.Point(744, 26);
             this.btnBitmapConvert.Name = "btnBitmapConvert";
             this.btnBitmapConvert.Size = new System.Drawing.Size(75, 23);
-            this.btnBitmapConvert.TabIndex = 3;
+            this.btnBitmapConvert.TabIndex = 2;
             this.btnBitmapConvert.Text = "位图转换";
             this.btnBitmapConvert.UseVisualStyleBackColor = true;
             this.btnBitmapConvert.Click += new System.EventHandler(this.btnBitmapConvert_Click);
