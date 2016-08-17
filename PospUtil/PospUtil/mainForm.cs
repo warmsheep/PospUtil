@@ -5,7 +5,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -47,17 +50,17 @@ namespace PospUtil
                 MessageBox.Show("密钥不能为空！");
                 return;
             }
-            if(key.Length % 8 != 0)
+            if (key.Length % 8 != 0)
             {
                 MessageBox.Show("密钥长度有误！");
                 return;
             }
-            if(reqData == "")
+            if (reqData == "")
             {
                 MessageBox.Show("数据不能为空！");
                 return;
             }
-            if(reqData.Length % 8 != 0)
+            if (reqData.Length % 8 != 0)
             {
                 MessageBox.Show("数据长度有误");
                 return;
@@ -156,7 +159,7 @@ namespace PospUtil
                 MessageBox.Show("数据不能为空！");
                 return;
             }
-           
+
 
             if (masterKey != "")
             {
@@ -181,7 +184,7 @@ namespace PospUtil
             string masterKey = this.tboxMacMasterKey.Text.Trim();
             string macKey = this.tboxMacMacKey.Text.Trim();
             string reqData = this.tboxMacReqData.Text.Trim();
-            if(masterKey != "" && masterKey.Length % 8 != 0)
+            if (masterKey != "" && masterKey.Length % 8 != 0)
             {
                 MessageBox.Show("主密钥长度有误！");
                 return;
@@ -201,9 +204,9 @@ namespace PospUtil
                 MessageBox.Show("数据不能为空！");
                 return;
             }
-           
 
-            if(masterKey != "")
+
+            if (masterKey != "")
             {
                 macKey = DesEncryptUtil.desDecrypt(macKey, masterKey);
             }
@@ -391,7 +394,7 @@ namespace PospUtil
                 return;
             }
 
-            if(masterKey != "")
+            if (masterKey != "")
             {
                 pinKey = DesEncryptUtil.desDecrypt(pinKey, masterKey);
             }
@@ -400,7 +403,7 @@ namespace PospUtil
             if (cardNo != "")
             {
                 pin = StringUtil.byteToHexString(PinUtil.process(pin, cardNo));
-                string result = DesEncryptUtil.desEncrypt(pin,pinKey);
+                string result = DesEncryptUtil.desEncrypt(pin, pinKey);
                 this.tboxPinResult.Text = result;
             }
             //不带卡号加密
@@ -455,9 +458,9 @@ namespace PospUtil
             {
                 //解密
                 string pinBlock = DesEncryptUtil.desDecrypt(pin, pinKey);
-                byte[] pinBlockClearText = PinUtil.reverse(cardNo,pinBlock);
+                byte[] pinBlockClearText = PinUtil.reverse(cardNo, pinBlock);
                 string result = StringUtil.byteToHexString(pinBlockClearText);
-                
+
                 this.tboxPinResult.Text = result;
             }
             //不带卡号加密
@@ -477,23 +480,23 @@ namespace PospUtil
         {
             int encryptType = 0;    //加密类型 1、MD5 2、SHA1
             string reqData = this.tboxEncReqData.Text.Trim();
-            if(rbtnEncMd5.Checked == true)
+            if (rbtnEncMd5.Checked == true)
             {
                 encryptType = 1;
             }
-            else if(rbtnEncSha1.Checked == true)
+            else if (rbtnEncSha1.Checked == true)
             {
                 encryptType = 2;
             }
 
             //MD5加密
-            if(encryptType == 1)
+            if (encryptType == 1)
             {
                 string result = MD5EncryptUtil.md5Encrypt(reqData);
                 this.tboxEncResult.Text = result;
             }
             //SHA1加密
-            else if(encryptType == 2)
+            else if (encryptType == 2)
             {
                 string result = SHA1EncryptUtil.sha1Encrypt(reqData);
                 this.tboxEncResult.Text = result;
@@ -558,7 +561,7 @@ namespace PospUtil
         }
 
 
-        
+
         private void copyZmkToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Clipboard.SetText("40404040404040405151515151515151");
@@ -604,34 +607,34 @@ namespace PospUtil
         {
             string bitmapData = this.tboxBitmap.Text.Trim();
             bitmapData = bitmapData.Replace(" ", "");
-            if(bitmapData.Length != 16 && bitmapData.Length != 32)
+            if (bitmapData.Length != 16 && bitmapData.Length != 32)
             {
                 MessageBox.Show("位图长度有误!");
                 return;
             }
             byte[] bitmapBytes = StringUtil.hexStringToByte(bitmapData);
             StringBuilder sb = new StringBuilder();
-            foreach(byte b in bitmapBytes)
+            foreach (byte b in bitmapBytes)
             {
                 sb.Append(Convert.ToString(b, 2).PadLeft(8, '0'));
             }
             string bitmapStr = sb.ToString();
             //128位图
-            if(bitmapStr.Length == 128)
+            if (bitmapStr.Length == 128)
             {
-                for(int i = 0; i < bitmapStr.Length; i++)
+                for (int i = 0; i < bitmapStr.Length; i++)
                 {
                     string s = bitmapStr.Substring(i, 1);
-                    if(s == "1")
+                    if (s == "1")
                     {
                         CheckBox checkbox = (CheckBox)findControl(this, "checkBox" + (i + 1));
                         checkbox.ForeColor = Color.Red;
-                        checkbox.Font = new Font("宋体",16, FontStyle.Bold);
+                        checkbox.Font = new Font("宋体", 16, FontStyle.Bold);
                         checkbox.Checked = true;
-                    } 
+                    }
                     else
                     {
-                        CheckBox checkbox = (CheckBox)findControl(this,"checkBox" + (i + 1));
+                        CheckBox checkbox = (CheckBox)findControl(this, "checkBox" + (i + 1));
                         checkbox.ForeColor = Color.Black;
                         checkbox.Font = new Font("宋体", 9, FontStyle.Regular);
                         checkbox.Checked = false;
@@ -639,7 +642,7 @@ namespace PospUtil
                 }
             }
             //64位图
-            else if(bitmapStr.Length == 64)
+            else if (bitmapStr.Length == 64)
             {
                 for (int i = 0; i < bitmapStr.Length; i++)
                 {
@@ -701,12 +704,12 @@ namespace PospUtil
             for (int i = 0; i < 128; i++)
             {
                 CheckBox checkbox = (CheckBox)findControl(this, "checkBox" + (i + 1));
-                if(checkbox.Checked)
+                if (checkbox.Checked)
                 {
                     checkbox.ForeColor = Color.Red;
                     checkbox.Font = new Font("宋体", 16, FontStyle.Bold);
                     sb.Append("1");
-                } 
+                }
                 else
                 {
                     checkbox.ForeColor = Color.Black;
@@ -715,14 +718,14 @@ namespace PospUtil
                 }
             }
 
-            for(int i = 0; i < 128; i = i + 4)
+            for (int i = 0; i < 128; i = i + 4)
             {
                 string str = sb.ToString().Substring(i, 4);
-                string hexStr = string.Format("{0:x}",Convert.ToInt32(str, 2)).ToUpper();
+                string hexStr = string.Format("{0:x}", Convert.ToInt32(str, 2)).ToUpper();
                 hexSb.Append(hexStr);
             }
-            
-            this.tboxBitmap.Text = hexSb.ToString().Substring(0,16) + " " + hexSb.ToString(16,16);
+
+            this.tboxBitmap.Text = hexSb.ToString().Substring(0, 16) + " " + hexSb.ToString(16, 16);
         }
 
         /// <summary>
@@ -741,5 +744,82 @@ namespace PospUtil
             }
             this.tboxBitmap.Text = "";
         }
+
+        private void btnSocketSend_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string reqData = this.tboxSocketReqData.Text.Trim();
+                Console.WriteLine(reqData.Length);
+                int port = Convert.ToInt32(this.tboxSocketPort.Text.Trim());
+                string host = this.tboxSocketAddr.Text.Trim();
+                reqData = reqData.Replace(" ", "");
+                reqData = reqData.Replace("\n", "");
+                reqData = reqData.Replace("\t", "");
+                reqData = reqData.Replace("\r", "");
+
+                //创建终结点EndPoint
+                IPAddress ip = IPAddress.Parse(host);
+                IPEndPoint ipe = new IPEndPoint(ip, port);   //把ip和端口转化为IPEndPoint的实例
+
+                //创建Socket并连接到服务器
+
+                Socket c = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);   //  创建Socket
+                c.Connect(ipe); //连接到服务器
+                Console.WriteLine("Connecting...");
+                
+                if (c.Connected)
+                {
+                    //向服务器发送信息
+                    //string reqLen = reqData.Length.ToString();
+                    //reqLen = reqLen.PadLeft(4, '0');
+                    //reqData = reqLen + reqData;
+
+                    byte[] reqDataBytes = Encoding.ASCII.GetBytes(reqData);
+                    int i = reqData.Length;
+                    // c.Send(lenBytes);
+                    string s = i.ToString("X");
+
+                    byte[] b = new byte[2];
+                    if (s.Length <= 2)
+                    {
+                        s = s.PadLeft(2, '0');
+                        b[0] = 0x00;
+                        b[1] = StringUtil.hexStringToByte(s)[0];
+                    }
+                    else
+                    {
+                        s = s.PadLeft(4, '0');
+                        b = StringUtil.hexStringToByte(s);
+                    }
+
+                    c.Send(b);
+                    c.Send(reqDataBytes); //发送信息
+
+                    //接受从服务器返回的信息
+                    string recvStr = "";
+                    byte[] recvBytes = new byte[16384];
+                    int bytes;
+                    bytes = c.Receive(recvBytes, recvBytes.Length, 0);    //从服务器端接受返回信息
+                    
+                    recvStr += Encoding.ASCII.GetString(recvBytes, 2, bytes-2);
+                    c.Dispose();
+                    c.Close();
+                    
+                    Console.WriteLine(recvStr);
+                    this.tboxSocketResult.Text = recvStr;
+                }
+
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("argumentNullException:{0}", ex);
+            }
+            catch (SocketException ex)
+            {
+                Console.WriteLine("SocketException:{0}", ex);
+            }
+        }
+
     }
 }
