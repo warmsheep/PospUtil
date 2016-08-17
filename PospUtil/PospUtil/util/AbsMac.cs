@@ -47,29 +47,5 @@ namespace PospUtil.util
             throw new Exception("获取8倍长数据失败,data = " + data);
         }
 
-        /// <summary>
-        /// 异或运算
-        /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <returns></returns>
-        public static byte[] getExclusiveOR(byte[] a, byte[] b)
-        {
-            try
-            {
-                byte[] c = new byte[8];
-                for (int i = 0; i < 8; i++)
-                {
-                    c[i] = ((byte)(a[i] ^ b[i]));
-                }
-                return c;
-            }
-            catch (Exception e)
-            {
-                throw new Exception("异或运算失败,a = " + a + ", b = " + b);
-            }
-            throw new Exception("异或运算失败,a = " + a + ", b = " + b);
-        }
-
     }
 }

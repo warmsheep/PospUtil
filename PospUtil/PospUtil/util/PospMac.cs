@@ -94,7 +94,7 @@ namespace PospUtil.util
             byte[] zero = new byte[] { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
             for (int i = 0; i < groupLen; i++)
             {
-                zero = getExclusiveOR(body[i], zero);
+                zero = StringUtil.xor(body[i], zero);
             }
             body = null;
             string bodyXor = StringUtil.byteToHexString(zero);//异或的结果
@@ -109,7 +109,7 @@ namespace PospUtil.util
             int bodyLength = bodyXor.Length;
             byte[] bodyXor_2 = Encoding.UTF8.GetBytes(bodyXor.Substring(8, 8));
             Console.WriteLine("右半部分:" + StringUtil.byteToHexString(bodyXor_2));
-            byte[] keyXor = getExclusiveOR(bodyXor_encrypt, bodyXor_2);
+            byte[] keyXor = StringUtil.xor(bodyXor_encrypt, bodyXor_2);
             Console.WriteLine("加密结果异或右半部分:" + StringUtil.byteToHexString(keyXor));
             bodyXor_encrypt = null;
             bodyXor_2 = null;

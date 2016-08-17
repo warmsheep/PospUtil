@@ -58,7 +58,10 @@
     <Compile Include="util\ANSIX919.cs" />
     <Compile Include="util\ANSIX99.cs" />
     <Compile Include="util\DesEncryptUtil.cs" />
+    <Compile Include="util\MD5EncryptUtil.cs" />
+    <Compile Include="util\PinUtil.cs" />
     <Compile Include="util\PospMac.cs" />
+    <Compile Include="util\SHA1EncryptUtil.cs" />
     <Compile Include="util\StringUtil.cs" />
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>

@@ -44,7 +44,7 @@ namespace PospUtil.util
             byte[] zero = new byte[8];
             for (int i = 0; i < groupLen; i++)
             {
-                zero = getExclusiveOR(body[i], zero);
+                zero = StringUtil.xor(body[i], zero);
                 zero = DesEncryptUtil.desEncrypt(zero, macKeyBytes);
             }
             body = (byte[][])null;
