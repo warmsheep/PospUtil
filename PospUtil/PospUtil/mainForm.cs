@@ -774,9 +774,25 @@ namespace PospUtil
                     //string reqLen = reqData.Length.ToString();
                     //reqLen = reqLen.PadLeft(4, '0');
                     //reqData = reqLen + reqData;
-
-                    byte[] reqDataBytes = Encoding.ASCII.GetBytes(reqData);
-                    int i = reqData.Length;
+                    byte[] reqDataBytes = null;
+                    int i = 0;
+                    if (radioAscii.Checked == true)
+                    {
+                        reqDataBytes = Encoding.ASCII.GetBytes(reqData);
+                        i = reqData.Length;
+                    }
+                    else if(radioHex.Checked == true)
+                    {
+                        reqDataBytes = StringUtil.hexStringToByte(reqData);
+                        i = reqDataBytes.Length;
+                    }
+                    //默认
+                    else
+                    {
+                        reqDataBytes = Encoding.ASCII.GetBytes(reqData);
+                        i = reqData.Length;
+                    }
+                    
                     // c.Send(lenBytes);
                     string s = i.ToString("X");
 
@@ -801,8 +817,24 @@ namespace PospUtil
                     byte[] recvBytes = new byte[16384];
                     int bytes;
                     bytes = c.Receive(recvBytes, recvBytes.Length, 0);    //从服务器端接受返回信息
+
+                    if (radioAscii.Checked == true)
+                    {
+                        recvStr += Encoding.ASCII.GetString(recvBytes, 2, bytes - 2);
+                    }
+                    else if (radioHex.Checked == true)
+                    {
+                   
+                        recvStr += StringUtil.byteToHexString(recvBytes).Substring(2, bytes - 2);
+                       
+                    }
+                    //默认
+                    else
+                    {
+                        recvStr += Encoding.ASCII.GetString(recvBytes, 2, bytes - 2);
+                    }
+
                     
-                    recvStr += Encoding.ASCII.GetString(recvBytes, 2, bytes-2);
                     c.Dispose();
                     c.Close();
                     
@@ -821,5 +853,14 @@ namespace PospUtil
             }
         }
 
+        private void toolTipMacEncrypt_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

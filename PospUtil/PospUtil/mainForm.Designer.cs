@@ -244,6 +244,9 @@
             this.copyZakToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyZekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyEdkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label23 = new System.Windows.Forms.Label();
+            this.radioHex = new System.Windows.Forms.RadioButton();
+            this.radioAscii = new System.Windows.Forms.RadioButton();
             this.tabCtrl.SuspendLayout();
             this.tbPgEncrypt.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -2541,6 +2544,9 @@
             // 
             // tbPgSocket
             // 
+            this.tbPgSocket.Controls.Add(this.radioHex);
+            this.tbPgSocket.Controls.Add(this.radioAscii);
+            this.tbPgSocket.Controls.Add(this.label23);
             this.tbPgSocket.Controls.Add(this.tboxSocketPort);
             this.tbPgSocket.Controls.Add(this.label22);
             this.tbPgSocket.Controls.Add(this.tboxSocketAddr);
@@ -2637,6 +2643,7 @@
             // toolTipMacEncrypt
             // 
             this.toolTipMacEncrypt.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTipMacEncrypt.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTipMacEncrypt_Popup);
             // 
             // menuStrip1
             // 
@@ -2710,6 +2717,40 @@
             this.copyEdkToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.copyEdkToolStripMenuItem.Text = "复制EDK";
             this.copyEdkToolStripMenuItem.Click += new System.EventHandler(this.copyEdkToolStripMenuItem_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(599, 534);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(53, 12);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "报文格式";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
+            // 
+            // radioHex
+            // 
+            this.radioHex.AutoSize = true;
+            this.radioHex.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.radioHex.Location = new System.Drawing.Point(742, 532);
+            this.radioHex.Name = "radioHex";
+            this.radioHex.Size = new System.Drawing.Size(41, 16);
+            this.radioHex.TabIndex = 11;
+            this.radioHex.Text = "HEX";
+            this.radioHex.UseVisualStyleBackColor = true;
+            // 
+            // radioAscii
+            // 
+            this.radioAscii.AutoSize = true;
+            this.radioAscii.Checked = true;
+            this.radioAscii.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.radioAscii.Location = new System.Drawing.Point(658, 532);
+            this.radioAscii.Name = "radioAscii";
+            this.radioAscii.Size = new System.Drawing.Size(53, 16);
+            this.radioAscii.TabIndex = 10;
+            this.radioAscii.TabStop = true;
+            this.radioAscii.Text = "ASCII";
+            this.radioAscii.UseVisualStyleBackColor = true;
             // 
             // mainForm
             // 
@@ -2962,6 +3003,9 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox tboxSocketAddr;
         private System.Windows.Forms.TextBox tboxSocketPort;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.RadioButton radioHex;
+        private System.Windows.Forms.RadioButton radioAscii;
     }
 }
 
